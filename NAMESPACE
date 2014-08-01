@@ -1,0 +1,18 @@
+export(checkArgs, estimateHap, newArgs,changeArgs,
+readArgs, 
+restartRun, 
+setWeights, 
+writeArgs, writeTreeoutput,
+addTrees, readTrees, readOutput, treeapply, addTreeStat)
+S3method(print, pars) 
+S3method(print, treeoutput) 
+S3method(summary, treeoutput)
+S3method(plot, treeoutput) 
+S3method(merge, treeoutput) 
+S3method(changeArgs, pars)
+S3method(changeArgs, treeoutput)
+S3method(changeArgs, default)
+importFrom(ape, read.tree, write.tree)
+importFrom(haplo.stats, haplo.em, geno1to2)
+
+
