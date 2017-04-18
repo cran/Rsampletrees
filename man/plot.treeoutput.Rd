@@ -34,21 +34,24 @@ the average of the proportion of nodes that have an update accepted.
 \value{
 The three or more plots are plotted in the graphics window.
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{layout}
 \examples{
-
+#\dontrun{
+require(ape)
 mrca.age=function(tree)
 {
 	return(coalescent.intervals(tree)$total.depth)
 }
 
-filename=system.file("Examples/example_g_pars", package="Rsampletrees")
+#system.file("Examples/example_g_pars", package="Rsampletrees")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_g_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
 
 # Must change the path so that the output can be found
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName,sep="/")
 runpars=changeArgs(runpars, RunName=runname)
 
 # Read in the output
@@ -60,6 +63,8 @@ plot(results, layoutmat=matrix(c(1,1,2,3),byrow=TRUE,nrow=2))
 plot(results, oneperpage=TRUE, asktoplot=TRUE)
 
 # Add a tree statistic
-results=addTreeStat(results, myfunc=mrca.age, funcname="Time to MRCA")
+results=addTreeStat(results, myfunc=mrca.age, funcname="Time.to.MRCA")
 plot(results)
+
+#}
 }

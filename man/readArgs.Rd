@@ -13,9 +13,12 @@ that have been previously saved to a file. }
 Returns an object of class 'pars' with settings from the 
 input file
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \examples{
-settingsname=system.file("Examples/example_h_pars", package="Rsampletrees")
-runpars=readArgs(settingsname, check=FALSE)
+filename=paste(path.package("Rsampletrees"),"/extdata/example_g_pars",sep="")
+runpars=readArgs(filename, check=FALSE)
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName, sep="/")
+runpars=changeArgs(runpars, RunName=runname)
+print.pars(runpars)
 }

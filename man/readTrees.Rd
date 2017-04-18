@@ -43,13 +43,15 @@ treeoutput object; use addTrees instead.}
 \value{
 An object of class `multiPhylo' which is a list of tree elements.
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett; uses functions from APE package, maintained by Emmanuel Paradis}
 \seealso{
 read.tree, addTrees
 }
 \examples{
-treesname=system.file("Output/Example-h_trees.out", package="Rsampletrees")
+#\dontrun{
+treesname=paste(path.package("Rsampletrees"),"/extdata/Example-h_trees.out",sep="")
+#system.file("Output/Example-h_trees.out", package="Rsampletrees")
 
 # Read in all the trees in the file; may be slow
 mytrees=readTrees(filename=treesname)
@@ -70,4 +72,7 @@ names(mytrees)
 # Read in lines 2-4
 mytrees=readTrees(filename=treesname, all=FALSE, start=2, end=4)
 names(mytrees)
+
+#}
 }
+

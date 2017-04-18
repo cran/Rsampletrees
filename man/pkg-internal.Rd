@@ -1,0 +1,26 @@
+\name{changeArgs.default}
+\alias{checkfile}
+\alias{defaultArgs}
+\alias{setWeights}
+\alias{summary.treeoutput}
+\alias{treeapply}
+\alias{writeArgs}
+\alias{writeTreeoutput}
+\alias{formatArgs}
+\alias{changeArgs.default}
+\docType{package}
+\title{
+Internal use functions.
+}
+\description{
+NA
+}
+\usage{
+NA
+}
+\examples{
+\dontrun{
+NA
+}
+}
+\keyword{internal}

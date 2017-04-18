@@ -10,9 +10,10 @@ proportions. Note that the trees themselves are by default not read in as these 
 be very large.  
 }
 \usage{
-readOutput(argobj=NULL, argfile=NULL, addtrees=FALSE)
+readOutput(treeobj=NULL, argobj=NULL, argfile=NULL, addtrees=FALSE)
 }
 \arguments{
+\item{treeobj}{A `treeoutput' object from a previous sampletrees runs}
 \item{argobj}{A settings object of class `pars' describing the sampletrees run}
 \item{argfile}{A file containing the settings describing the sampletrees run}
 \item{addtrees}{If TRUE, store the trees in the output object (default=FALSE)}
@@ -38,17 +39,22 @@ documentation for more information on the `multiPhylo' class.}
 The component `procdata' (processed data) is also a list, initially made up only of
 a matrix with the acceptance proportions for each update type. Tree statistics may be added to procdata by 
 addTreeStat}
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{addTreeStat, addTrees}
 \examples{
-filename=system.file("Examples/example_g_pars", package="Rsampletrees")
+#\dontrun{
+#system.file("Examples/example_g_pars", package="Rsampletrees")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_g_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
 
 # Must change the path so that the output can be found
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName, sep="/")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
 runpars=changeArgs(runpars, RunName=runname)
 
 # Read in the output
 results=readOutput(argobj=runpars)
+
+#}
 }

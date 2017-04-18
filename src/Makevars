@@ -1,0 +1,14 @@
+## Use the R_HOME indirection to support installations of multiple R version
+##PKG_CPPFLAGS = -I/usr/include
+##PKG_LIBS = `$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()"` -L/usr/lib/x86_64-linux-gnu -lgsl -lgslcblas -lm 
+##PKG_LIBS = -L/usr/lib/x86_64-linux-gnu -lgsl -lgslcblas -lm 
+
+GSL_CFLAGS=-I/usr/include
+GSL_LIBS=-L/usr/lib/x86_64-linux-gnu -lgsl -lgslcblas -lm
+##GSL_LIBS=-L/usr/lib/x86_64-linux-gnu -lgsl -lm  ##without CBLAS
+
+PKG_CPPFLAGS = $(GSL_CFLAGS)
+PKG_LIBS = $(GSL_LIBS)
+
+CXX_STD = CXX11
+

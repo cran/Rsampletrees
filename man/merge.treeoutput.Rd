@@ -32,20 +32,27 @@ computation is not stopped; the thinning for the first set of output is assumed.
 \value{
 Returns a list of class `treeoutput' with values set to those in output1 and output2.
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{restartRun, writeTreeoutput}
 \examples{
-filename=system.file("Examples/example_h_pars",package="Rsampletrees")
+#\dontrun{
+#system.file("Examples/example_h_pars",package="Rsampletrees")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_h_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName, sep="/")
 runpars=changeArgs(runpars, RunName=runname)
-results1=readOutput(runpars)
+results1=readOutput(argobj=runpars)
 
-filename=system.file("Examples/example_h_2_pars",package="Rsampletrees")
+#system.file("Examples/example_h_2_pars",package="Rsampletrees")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_h_2_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName, sep="/")
 runpars=changeArgs(runpars, RunName=runname)
-results2=readOutput(runpars)
+results2=readOutput(argobj=runpars)
 newresults=merge(x=results1, y=results2, runname="Merge2000")
+
+#}
 }

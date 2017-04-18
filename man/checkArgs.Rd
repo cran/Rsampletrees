@@ -34,7 +34,9 @@ that the number of locations matches the number of SNPs in the genotype/sequence
 Returns an object of class 'pars' with the 'clean' variable set to TRUE
 if the arguments in `args' pass the error check and FALSE otherwise.
 }
-\references{TBD}
+\references{
+Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016
+}
 \author{Kelly Burkett}
 \examples{
 
@@ -43,9 +45,12 @@ runpars=newArgs()
 runpars=checkArgs(runpars)
 
 # Will not produce errors
-datname=system.file("Examples/sequences_Theta8_Rho8.txt",package="Rsampletrees")
-locname=system.file("Examples/locations_Theta8_Rho8.txt",package="Rsampletrees")
-weightname=system.file("Examples/weights-h.txt", package="Rsampletrees")
+#system.file("Examples/sequences_Theta8_Rho8.txt",package="Rsampletrees")
+datname=paste(path.package("Rsampletrees"),"/extdata/sequences_Theta8_Rho8.txt",sep="")
+#system.file("Examples/locations_Theta8_Rho8.txt",package="Rsampletrees")
+locname=paste(path.package("Rsampletrees"),"/extdata/locations_Theta8_Rho8.txt",sep="")
+#system.file("Examples/weights-h.txt", package="Rsampletrees")
+weightname=paste(path.package("Rsampletrees"),"/extdata/weights-h.txt",sep="")
 runpars=newArgs(DataFile=datname, DataType="h", WeightFile=weightname,
 		LocationFile=locname,RunName="Test-h",FocalPoint=10000)
 runpars=checkArgs(runpars)

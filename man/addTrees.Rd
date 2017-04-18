@@ -30,34 +30,38 @@ If the start/stop/nlines options are used,
 then all lines between and including `start' and `stop' will be read in. If `nlines' is provided, 
 than a total of `nlines' will be read in, starting from the row given by `start'.}
 \value{An object of class `treeoutput' with the trees stored in the rawdata component}
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{readOutput, readTrees}
 \examples{
+#\dontrun{
 # Read in the settings; Must change the RunName so that the example files can be found
-filename=system.file("Examples/example_g_pars",package="Rsampletrees")
+
+#system.file("Examples/example_g_pars",package="Rsampletrees")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_g_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName,sep="/")
 runpars=changeArgs(runpars, RunName=runname)
 
-
 # 1. Read in all the trees; may be slow
-results=readOutput(runpars)
+results=readOutput(argobj=runpars)
 results=addTrees(results)
 length(results$rawdata$Trees)
 
 # 2. Read in a selection of lines
-results=readOutput(runpars)
-results=addTrees(results, all=FALSE, lines=c(5,10,62,63,90))
+results=readOutput(argobj=runpars)
+results=addTrees(results, all=FALSE, lines=c(5,10,31))
 length(results$rawdata$Trees)
 
 # 3. Read in trees from lines 5 to 15
-results=readOutput(runpars)
+results=readOutput(argobj=runpars)
 results=addTrees(results, all=FALSE, start=5, end=15)
 length(results$rawdata$Trees)
 
 # 4. Read in 20 trees, starting at line 10
-results=readOutput(runpars)
+results=readOutput(argobj=runpars)
 results=addTrees(results, all=FALSE, start=10, nlines=20)
 length(results$rawdata$Trees)
+#}
 }

@@ -1,0 +1,16 @@
+RunName Example-h
+Seed 273018321
+DataType h
+DataFile sequences_Theta8_Rho8.txt
+LocationFile locations_Theta8_Rho8.txt
+WeightFile weights-h.txt
+FocalPoint 10000
+ChainLength 50000
+BurnIn 10000
+Thinning 1000
+InitialTheta 1
+MinTheta 0.0001
+MaxTheta 10
+InitialRho 0.0004
+ScaleRho 0.1
+ShapeRho 1

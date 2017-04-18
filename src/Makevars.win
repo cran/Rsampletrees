@@ -1,0 +1,10 @@
+## Use the R_HOME indirection to support installations of multiple R version
+PKG_LIBS=-L"C:/Program Files (x86)/GnuWin32/bin" -lgsl -lgslcblas
+PKG_CXXFLAGS=-std=c++11 -I'C:\Program Files (x86)\GnuWin32\include'
+PKG_CPPFLAGS=-I$(LIB_GSL)/include -I../inst/include
+CXXFLAGS = -I$(LOCAL_INCLUDE) 
+##PKG_LIBS = -L%XML_DIR%/bin -lgsl -lgslcblas
+
+##PKG_CPPFLAGS = -L$(GSL_CFLAGS)
+##CCFLAGS = -O2
+##CCFLAGS = -std=c++11

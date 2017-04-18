@@ -11,7 +11,7 @@ all the tags. The second column gives their corresponding values.
 \item{x}{An object of class 'pars'}
 \item{...}{additional arguments to print; currently unused}
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{summary.pars, checkArgs, print.treeoutput}
 \examples{

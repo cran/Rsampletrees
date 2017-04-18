@@ -83,6 +83,6 @@ runpars=newArgs(DataFile="sequences_Theta8_Rho8.txt", DataType="h",
 		LocationFile="locations_Theta8_Rho8.txt",RunName="Test-h",FocalPoint=10000)
 runpars=changeArgs(runpars, Seed=1938474, WeightFile="weights-h.txt")
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{checkArgs}

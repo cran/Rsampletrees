@@ -59,13 +59,17 @@ a list of likely haplotypes (optional if DataType="g"). Each row corresponds to 
 (Default=NA)}
 }
 \examples{
-filename=system.file("Examples/example_g_pars",package="Rsampletrees")
+#\dontrun{
+ #system.file("Examples/example_g_pars",package="Rsampletrees")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_g_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName, sep="/")
 runpars=changeArgs(runpars, RunName=runname)
-results=readOutput(runpars)
+results=readOutput(argobj=runpars)
 results=changeArgs(results, RunName="NewName")
+#}
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \seealso{changeArgs.pars, checkArgs}

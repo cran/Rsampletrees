@@ -3,27 +3,24 @@
 \alias{Rsampletrees}
 \docType{package}
 \title{
-Pre and Post-Processing of sampletrees output
+MCMC sampling of gene genealogies conditional on genetic data
 }
 \description{
-Contains functions that are useful for pre- and post-processing the tree output from the MCMC-based C++ program sampletrees. 
+Sample ancestral trees conditional on phased or unphased SNP genotype data. The actual tree sampling is done using a C++ program that is launched within R. The package also contains functions for specifying the tree-sampling settings (pre-processing) and for storing and manipulating the sampled trees (post-processing). More information about sampletrees can be found at http://stat.sfu.ca/statgen/research/sampletrees.html. 
+
 }
 \details{
 \tabular{ll}{
 Package: \tab Rsampletrees\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2014/08/01\cr
+Version: \tab 1.0\cr
+Date: \tab 2017-02-21\cr
 License: \tab GPL-2\cr
 }
 
-Use the pre-processing functions to create and write settings values to a file.
-
-After running sampletrees, use post-processing functions to read the sampletrees output (acceptance rates, mutation and recombination rates, trees) into R in order to summarize the results.
-
-Future versions will have a sampletrees function that calls the C++ code directly.
-
 }
 \author{Kelly Burkett}
-\references{TBD}
+\references{
+Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016.
+}
 

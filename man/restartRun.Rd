@@ -46,16 +46,21 @@ the previous run.
 Returns an object of class `pars' with the settings for a sampletrees run 
 that starts where the previous run finished.
 }
-\references{TBD}
+\references{Burkett KM, McNeney B, Graham J. Sampletrees and Rsampletrees: sampling gene genealogies conditional on SNP genotype data. Bioinformatics. 32:1580-2, 2016}
 \author{Kelly Burkett}
 \examples{
+#\dontrun{
 
-filename=system.file("Examples/example_h_pars",package="Rsampletrees")
+#system.file("Examples/example_h_pars",package="Rsampletrees")
+filename=paste(path.package("Rsampletrees"),"/extdata/example_h_pars",sep="")
 runpars=readArgs(filename, check=FALSE)
 
 # Include path in run name so that function can find the necessary files
-runname=paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
+runname=paste(path.package("Rsampletrees"),"extdata",runpars$RunName, sep="/")
+#paste(system.file(package="Rsampletrees"),runpars$RunName, sep="/")
 runpars=changeArgs(runpars,RunName=runname)
 
 newpars=restartRun("example-h-2.pars", oldargs=runpars, totalsamples=200000)
+
+#}
 }

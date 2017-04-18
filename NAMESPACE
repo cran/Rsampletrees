@@ -1,9 +1,7 @@
-export(checkArgs, estimateHap, newArgs,changeArgs,
-readArgs, 
-restartRun, 
-setWeights, 
-writeArgs, writeTreeoutput,
-addTrees, readTrees, readOutput, treeapply, addTreeStat)
+useDynLib(Rsampletrees)
+exportPattern("^[[:alpha:]]+")
+export(checkArgs, estimateHap, newArgs, changeArgs, readArgs, restartRun, setWeights, writeArgs, writeTreeoutput, addTrees,
+       readTrees, readOutput, treeapply, addTreeStat)
 S3method(print, pars) 
 S3method(print, treeoutput) 
 S3method(summary, treeoutput)
@@ -12,7 +10,11 @@ S3method(merge, treeoutput)
 S3method(changeArgs, pars)
 S3method(changeArgs, treeoutput)
 S3method(changeArgs, default)
-importFrom(ape, read.tree, write.tree)
-importFrom(haplo.stats, haplo.em, geno1to2)
 
+importFrom(Rcpp, evalCpp)
+importFrom("graphics", "barplot", "layout", "lines", "par", "plot")
+importFrom("stats", "lowess")
+importFrom("utils", "count.fields", "read.table", "write.table")
 
+import(haplo.stats)
+import(ape)
