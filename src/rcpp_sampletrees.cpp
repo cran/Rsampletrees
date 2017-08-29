@@ -63,4 +63,3 @@ RcppExport SEXP rcpp_sampletrees(SEXP inputStringsVect, SEXP inputIntegersVect, 
  															 	    Rcpp::Named("postProb.log")  = retour.postProbSamples.logPostProb));
 }
 
-

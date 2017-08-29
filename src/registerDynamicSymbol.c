@@ -8,10 +8,10 @@
 */
 
 /* .Call calls */
-extern SEXP rcpp_sampletrees(SEXP, SEXP, SEXP, SEXP);
+extern SEXP rcpp_sampletrees(SEXP, SEXP, SEXP);
 
 static const R_CallMethodDef CallEntries[] = {
-    {"rcpp_sampletrees", (DL_FUNC) &rcpp_sampletrees, 4},
+    {"rcpp_sampletrees", (DL_FUNC) &rcpp_sampletrees, 3},
     {NULL, NULL, 0}
 };
 

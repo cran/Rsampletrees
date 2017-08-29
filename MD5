@@ -1,8 +1,8 @@
-4e094cc2506063e60880d69bc5d68869 *DESCRIPTION
+eee75674512ea7a684f9aa3583b06a0e *DESCRIPTION
 8f4cce520cba40e8b8b81c564cda5a47 *NAMESPACE
 76e6e3b7331ac0c673977e2b91b7b025 *R/haplo_initialization.R
 71538d5d81fa0314d7787d1665b5a904 *R/post_sampletrees.R
-537c007b0f94d698b927aa01ffc58043 *R/pre_sampletrees.R
+569291bcdb288f1c833048fc17d0f693 *R/pre_sampletrees.R
 935c4006745f3fb538d2dded118be841 *inst/extdata/EM-hapfreqs.out
 6b4e58312efd5212bf37210b1391f615 *inst/extdata/EM-initial.out
 c4f599f81e102f56df1a945fd96b56df *inst/extdata/EM-known.out
@@ -74,11 +74,11 @@ f290758c78e58de6e8630432815b52c2 *src/p7.cpp
 1e6a17f1f70234ce6cea21dfd64a61ea *src/p7.h
 8e1840d73badc665ae00bcab1089eb46 *src/proposal.cpp
 c09c9bdaa30acd65996e8e40d5a90c6a *src/proposal.h
-4b0a71e50127bbeb86b399ee1de8db95 *src/rcpp_sampletrees.cpp
+020694cb9716e8b0681c984ad54d76c3 *src/rcpp_sampletrees.cpp
 6c5de27b1ecb9fff99ff008ab1c64aca *src/rcpp_sampletrees.h
 92572c613a35d9995841ddf6fc4e60b0 *src/readFiles.cpp
 4a8bc676bfa431d919a009f78e93c1fb *src/readFiles.h
-371d6e101b6e8fd9016f2b133ce18132 *src/registerDynamicSymbol.c
+e578c44a268f229baad7543ccb3c94eb *src/registerDynamicSymbol.c
 6c9bd928fbe1a9ffbebaade0e7c3f5d8 *src/rng.cpp
 2a156cb2de2a86678b66ad9f32fa6397 *src/rng.h
 64cdd3b11876b758a4150d81b4a0d545 *src/sampletrees.cpp

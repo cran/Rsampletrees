@@ -665,7 +665,7 @@ launch.sampletrees <- function(args, addtrees=FALSE)
  cat("\n\nLaunching sampletrees using : \n\n")
  writeArgs(args)
  cat("\n")
- dat <- .Call("rcpp_sampletrees", inputStrings, inputIntegers, inputDoubles, package="Rsampletrees")
+ dat <- .Call("rcpp_sampletrees", inputStrings, inputIntegers, inputDoubles, PACKAGE="Rsampletrees")
  
 # RunName			(="" ou prefix output)
 # DataFile		(name of the data file containing either the haplotype sequences or genotypes)
