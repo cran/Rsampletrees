@@ -626,7 +626,9 @@ checkArgs=function(args)
 	
 }
 
-
+# This is the function that sends the arguments to the c++ program "rcpp_sampletrees".
+# Parameters are checked and packed into 3 lists of Strings, Integer and Double.
+# The result from c++ is a list of 2 data.frame named 'accept' and 'postProbSamples'.
 launch.sampletrees <- function(args, addtrees=FALSE)
 {
  

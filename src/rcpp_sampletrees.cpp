@@ -11,6 +11,20 @@ using namespace std;
 // inputIntegers = seed,  ChainLength,  BurnIn,  Thinning,  RandomTree,  InitialHaplos,  HaploList,  output, InitialTree,  // st_rho, st_SA;
 // inputDoubles  = FocalPoint,  InitialTheta,  MinTheta,  MaxTheta,  InitialRho,  ScaleRho,  ShapeRho;
 
+/* This function links R with c++. The different types of data (Strings, integers and doubles) are transmitted separately by the wrappers (SEXP).
+*	From SEXP, it is translated into the corresponding type vectors from the Rcpp library.
+*	From the Rcpp library, it is translated into the standard library, using the Rcpp::as<> function. 
+*	Example : SEXP -> Rcpp::StringVector -> std::string 
+*
+*  All parameters are then put into an object of class 'Options' called "user_options". This is the class that can grow to include other options such as the trios.
+*	Using variables father and mother that are pointers to objects from the class 'Options'.
+*  
+*  The object "user_options" is transmitted to sampletrees which takes the options and returns a RcppList (see sampletrees.h) object containing :
+*	acceptSamples ('acceptOut' object) that replaces 'acceptfile' variable
+*	postProbSamples ('postProbOut' object) that replaces 'postprobfile' variable
+*  
+*  The results are sent back to R in a Rcpp::List object.
+*/
 RcppExport SEXP rcpp_sampletrees(SEXP inputStringsVect, SEXP inputIntegersVect, SEXP inputDoublesVect)
 {
  Rcpp::StringVector  inputStrings  (inputStringsVect);
