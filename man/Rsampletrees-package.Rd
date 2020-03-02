@@ -13,8 +13,8 @@ Sample ancestral trees conditional on phased or unphased SNP genotype data. The 
 \tabular{ll}{
 Package: \tab Rsampletrees\cr
 Type: \tab Package\cr
-Version: \tab 1.0\cr
-Date: \tab 2017-02-21\cr
+Version: \tab 1.0.3\cr
+Date: \tab 2020-02-21\cr
 License: \tab GPL-2\cr
 }
 

@@ -33,21 +33,21 @@
 
 unsigned long int random_seed()
 {
-	unsigned long int seed;
-	FILE *devrandom;
+       unsigned long int seed;
+       FILE *devrandom;
 
-	if ((devrandom = fopen("/dev/random","r")) == NULL) {
-		seed = time(NULL);
-		/*cout*/ Rcpp::Rcout << "Using time-based seed for RNG" << endl;
-	} else {
-		/*int bon = */fread(&seed,sizeof(seed),1,devrandom);
-		/*cout*/ Rcpp::Rcout << "Using /dev/random/ seed for RNG"  << endl;
-		fclose(devrandom);
-	}
+       if(((devrandom = fopen("/dev/random","r")) != NULL) &&
+          (fread(&seed, sizeof(seed), 1, devrandom) == 1)) {
+           /*cout*/ Rcpp::Rcout << "Using /dev/random/ seed for RNG"  << endl;
+           fclose(devrandom);
+       } else {
+           seed = time(NULL);
+           /*cout*/ Rcpp::Rcout << "Using time-based seed for RNG" << endl;
+       }
 
-	return(seed);
-
+       return(seed);
 }
+
 
 
 

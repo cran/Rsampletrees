@@ -1,11 +1,8 @@
-6b0767495a5a437d660de6f9aaf4f463 *DESCRIPTION
+8cc1f91e86656a5eb9c5da84641311d9 *DESCRIPTION
 8f4cce520cba40e8b8b81c564cda5a47 *NAMESPACE
 76e6e3b7331ac0c673977e2b91b7b025 *R/haplo_initialization.R
 71538d5d81fa0314d7787d1665b5a904 *R/post_sampletrees.R
 edcf9802fb0dde16f3ca820a7eced2d4 *R/pre_sampletrees.R
-935c4006745f3fb538d2dded118be841 *inst/extdata/EM-hapfreqs.out
-6b4e58312efd5212bf37210b1391f615 *inst/extdata/EM-initial.out
-c4f599f81e102f56df1a945fd96b56df *inst/extdata/EM-known.out
 43f4da3532852b8e68d19cc882cf39f0 *inst/extdata/Example-g_accept.out
 a2bf1093dc47151effbb35963cb28fd9 *inst/extdata/Example-g_firsttree.out
 c4f599f81e102f56df1a945fd96b56df *inst/extdata/Example-g_haplolist.out
@@ -32,13 +29,12 @@ fea4ed6b08ae92fef0c40545c8b86120 *inst/extdata/geno_Theta8_Rho8.txt
 e0cfc2c401a8cc126fc1178458a8c371 *inst/extdata/sequences_Theta8_Rho8.txt
 d78f9be609a324a964930ef5591d5167 *inst/extdata/weights-g.txt
 403ff4ad66ff42b5649564d27b8675fe *inst/extdata/weights-h.txt
-1bfa28a291cd6010183932ba566f9512 *man/Rsampletrees-package.Rd
+f454b1dfc95f6f4f449a8867c8440ee6 *man/Rsampletrees-package.Rd
 768eef122eba6f9d6f06a14205fe8c36 *man/addTreeStats.Rd
 aa4050af467f260ded20cb952640a014 *man/addTrees.Rd
 abef1c15e9f9ad63d7891b6e4b20e2bf *man/changeArgs.treeoutput.Rd
 3e3018431014b89845ee8082bc2659f7 *man/checkArgs.Rd
-3b59ce676353e5074ae0ed0b0e12a751 *man/estimateHap.Rd
-0342d671fa4d978a3fa4569def8a0983 *man/example_g_pars.Rd
+0ad244b13ffc2720e39792b3f3e61809 *man/estimateHap.Rd
 43f87c99fb56f75dab15e33257f65b82 *man/launch.sampletrees.Rd
 c8e58d4f36c68c266b6c9cefb2eb4334 *man/merge.treeoutput.Rd
 1ac61ea047aab05845a07aee1e11293d *man/newArgs.Rd
@@ -79,7 +75,7 @@ d23c95cb763f5cf266fbcf4b3db0a315 *src/rcpp_sampletrees.cpp
 92572c613a35d9995841ddf6fc4e60b0 *src/readFiles.cpp
 4a8bc676bfa431d919a009f78e93c1fb *src/readFiles.h
 e578c44a268f229baad7543ccb3c94eb *src/registerDynamicSymbol.c
-6c9bd928fbe1a9ffbebaade0e7c3f5d8 *src/rng.cpp
+967a25de6d905a8fb74da16bccaa2db6 *src/rng.cpp
 2a156cb2de2a86678b66ad9f32fa6397 *src/rng.h
 64cdd3b11876b758a4150d81b4a0d545 *src/sampletrees.cpp
 3b114ce3782943fa856cee9a293ca26e *src/sampletrees.h
